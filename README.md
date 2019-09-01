@@ -7,10 +7,7 @@
 
 * Michael odhiambo
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+# License
+* 
 
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+
