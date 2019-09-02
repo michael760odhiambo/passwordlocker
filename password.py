@@ -7,6 +7,7 @@ class Person:
     print(self.firstname, self.lastname)
 
 class Details(Person):
+  details_list = []
   def __init__(self, fname, lname, account,password):
     super().__init__(fname, lname)
     self.account = account
@@ -23,7 +24,15 @@ class Details(Person):
       print("Welcome", fname, lname, "to", self.account, self.password)
       input('create a password: ')
   
-  
+  def save_details(self):
+    '''
+    save_details method saves contact objects into details_list
+    '''
+    Details.details_list.append(self)
+    
+        
+
+        
      
   
 
@@ -32,7 +41,9 @@ x.welcome()
 print('do you have an account: ')
 input('enter your password: ')
 
+  
 
+        
 
     
     
