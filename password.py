@@ -39,13 +39,13 @@ class Details(Person):
     Details.details_list.remove(self)       
 
   @classmethod
-  def find_by_number(cls,account):
+  def find_by_account(cls,account):
     '''
     Method that takes in a account and returns a details that matches that account.
 
     Args:
 
-    number: account to search for
+    account: account to search for
     Returns :
     Details of person that matches the account.
     '''

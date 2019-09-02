@@ -70,7 +70,7 @@ class TestPerson(unittest.TestCase):
         '''
 
         self.new_details.save_details()
-        test_details = Details("Test","user","#james","test@user.com") # new contact
+        test_details = Details("Test","user","#james","test@user.com") # new details
         test_details.save_details()
 
         found_details = Details.find_by_account("#james")
