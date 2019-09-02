@@ -1,5 +1,8 @@
 import pyperclip
 class Person:
+  '''
+  this is a class the generate new instance of Person
+  '''
   def __init__(self, fname, lname):
     self.firstname = fname
     self.lastname = lname
@@ -8,6 +11,9 @@ class Person:
     print(self.firstname, self.lastname)
 
 class Details(Person):
+  '''
+  this is class that generate new instance of a persons details
+  '''
   details_list = []
   def __init__(self, fname, lname, account,password):
     super().__init__(fname, lname)
@@ -16,6 +22,9 @@ class Details(Person):
    
 
   def welcome(self):
+      '''
+       welcome method that prints a welcome message to the user
+      '''
       print('Hello there would mind to enter your first name:')
       fname = input()
       print('and your last name pliz:')
