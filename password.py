@@ -26,13 +26,35 @@ class Details(Person):
   
   def save_details(self):
     '''
-    save_details method saves contact objects into details_list
+    save_details method saves details objects into details_list
     '''
     Details.details_list.append(self)
-    
-        
 
-        
+  def delete_details(self):
+
+    '''
+    delete_details method deletes a saved details from the details_list
+    '''
+
+    Details.details_list.remove(self)       
+
+  @classmethod
+  def find_by_number(cls,account):
+    '''
+    Method that takes in a account and returns a details that matches that account.
+
+    Args:
+
+    number: account to search for
+    Returns :
+    Details of person that matches the account.
+    '''
+
+    for details in cls.details_list:
+      if details.account == account:
+                return details
+       
+            
      
   
 

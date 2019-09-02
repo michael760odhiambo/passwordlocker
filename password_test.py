@@ -38,22 +38,44 @@ class TestPerson(unittest.TestCase):
         test_save_details test case to test if the contact object is saved into
          the contact list
         '''
-        self.new_details.save_details() # saving the new contact
+        self.new_details.save_details() # saving the new detail
         self.assertEqual(len(Details.details_list),1)
 
     def test_save_multiple_details(self):
         '''
-        test_save_multiple_contact to check if we can save multiple contact
+        test_save_multiple_details to check if we can save multiple contact
         objects to our contact_list
         '''
 
           
         self.new_details.save_details()
-        test_details = Details("Test","user","#james","test@user.com") # new contact
+        test_details = Details("Test","user","#james","test@user.com") # new detail
         test_details.save_details()
         self.assertEqual(len(Details.details_list), 2)
-        
 
+    def test_delete_details(self):
+            '''
+            test_delete_details to test if we can remove a contact from our details list
+            '''
+            self.new_details.save_details()
+            test_details = Details("Test","user","#james","test@user.com") # new detail
+            test_details.save_details()
+
+            self.new_details.delete_details()# Deleting a detail object
+            self.assertEqual(len(Details.details_list),1)  
+
+    def test_find_details_by_account(self):
+        '''
+        test to check if we can find a details by account and display information
+        '''
+
+        self.new_details.save_details()
+        test_details = Details("Test","user","#james","test@user.com") # new contact
+        test_details.save_details()
+
+        found_details = Details.find_by_account("#james")
+
+        self.assertEqual(found_details.password,test_details.password)
           
 
 if __name__ == '__main__':
