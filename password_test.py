@@ -76,7 +76,26 @@ class TestPerson(unittest.TestCase):
         found_details = Details.find_by_account("")
 
         self.assertEqual(found_details.password,test_details.password)
-          
+
+    def test_details_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the details.
+        '''
+
+        self.new_details.save_details()
+        test_details = Details("","","","") # new details
+        test_details.save_details()
+
+        details_exists = Details.details_exist("")
+
+        self.assertTrue(details_exists) 
+
+    def test_display_all_details(self):
+        '''
+        method that returns a list of all detals saved
+        '''
+
+        self.assertEqual(Details.display_details(),Details.details_list)         
 
 if __name__ == '__main__':
     unittest.main()

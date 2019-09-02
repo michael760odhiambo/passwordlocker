@@ -53,7 +53,29 @@ class Details(Person):
     for details in cls.details_list:
       if details.account == account:
                 return details
-       
+
+  @classmethod
+  def details_exist(cls,account):
+    '''
+    Method that checks if a details exists from the details list.
+    Args:
+    account: account to search if it exists
+    Returns :
+    Boolean: True or false depending if the details exists
+    '''
+    for details in cls.details_list:
+       if details.account == account:
+                    return True
+    return False
+
+
+           
+  @classmethod
+  def display_details(cls):
+    '''
+    method that returns the contact list
+    '''
+    return cls.details_list   
             
      
   
