@@ -1,3 +1,7 @@
+#!/usr/bin/env python3.6
+import random 
+from password import Details
+
 def create_details(fname,lname,account,password):
     '''
     Function to create a new Details
@@ -37,7 +41,7 @@ def display_details():
 
 def main():
 
-    print("Hello Welcome to your details list. What is your name?")
+    print("Hello Welcome to your details list. can write your name again?")
     user_name = input() 
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
@@ -107,4 +111,6 @@ def main():
          else:
                             print("I really didn't get that. Please use the short codes")                        
                            
-              
+if __name__ == '__main__':
+
+    main()            
