@@ -16,9 +16,9 @@ class Details(Person):
    
 
   def welcome(self):
-      print('your first name:')
+      print('Hello there would mind to enter your first name:')
       fname = input()
-      print('your last name:')
+      print('and your last name pliz:')
       lname = input()
       
     
@@ -84,10 +84,10 @@ class Details(Person):
     pyperclip.copy(details_found.password)   
   
 
-x = Details("", "", ' passwordlocker','password')
+x = Details("", "", ' passwordlocker','account manager')
 x.welcome()
 print('do you have an account: ')
-input('enter your password: ')
+input('confirm your password: ')
 
   
 
