@@ -20,7 +20,7 @@ class TestPerson(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_details = Details("James","Muriuki","#james","james@ms.com") # create contact object
+        self.new_details = Details("","","","") # create contact object
 
 
     def test_init(self):
@@ -28,10 +28,10 @@ class TestPerson(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_details.firstname,"James")
-        self.assertEqual(self.new_details.lastname,"Muriuki")
-        self.assertEqual(self.new_details.account,"#james")
-        self.assertEqual(self.new_details.password,"james@ms.com")
+        self.assertEqual(self.new_details.firstname,"")
+        self.assertEqual(self.new_details.lastname,"")
+        self.assertEqual(self.new_details.account,"")
+        self.assertEqual(self.new_details.password,"")
 
     def test_save_details(self):
         '''
@@ -49,7 +49,7 @@ class TestPerson(unittest.TestCase):
 
           
         self.new_details.save_details()
-        test_details = Details("Test","user","#james","test@user.com") # new detail
+        test_details = Details("","","","") # new detail
         test_details.save_details()
         self.assertEqual(len(Details.details_list), 2)
 
@@ -58,7 +58,7 @@ class TestPerson(unittest.TestCase):
             test_delete_details to test if we can remove a contact from our details list
             '''
             self.new_details.save_details()
-            test_details = Details("Test","user","#james","test@user.com") # new detail
+            test_details = Details("","","","") # new detail
             test_details.save_details()
 
             self.new_details.delete_details()# Deleting a detail object
@@ -70,10 +70,10 @@ class TestPerson(unittest.TestCase):
         '''
 
         self.new_details.save_details()
-        test_details = Details("Test","user","#james","test@user.com") # new details
+        test_details = Details("","","","") # new details
         test_details.save_details()
 
-        found_details = Details.find_by_account("#james")
+        found_details = Details.find_by_account("")
 
         self.assertEqual(found_details.password,test_details.password)
           
