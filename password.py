@@ -78,7 +78,10 @@ class Details(Person):
     '''
     return cls.details_list   
             
-     
+  @classmethod
+  def copy_password(cls,account):
+    details_found = Details.find_by_account(account)
+    pyperclip.copy(details_found.password)   
   
 
 x = Details("", "", ' passwordlocker','password')

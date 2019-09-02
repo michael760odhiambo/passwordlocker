@@ -100,7 +100,7 @@ class TestPerson(unittest.TestCase):
     
     def test_copy_password(self):
         '''
-        Test to confirm that we are copying the password from a found details
+        Test to confirm that we are copying the password from a found Details
         '''
 
         self.new_details.save_details()
