@@ -7,6 +7,17 @@
 
 ** Michael odhiambo
 
+# Technologies used
+*  PYTHON
+
+# Setup/Installation Instruction
+* git clone it from my repository into your machine
+
+
+# Contact
+* you can reach on social media through
+* E-mail : michaelodhiambo760@gmail.com
+
 # live link:
 
 
