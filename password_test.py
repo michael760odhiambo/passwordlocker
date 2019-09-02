@@ -1,5 +1,6 @@
 import unittest
 from password import Details
+import pyperclip
 
 class TestPerson(unittest.TestCase):
 
@@ -92,10 +93,21 @@ class TestPerson(unittest.TestCase):
 
     def test_display_all_details(self):
         '''
-        method that returns a list of all detals saved
+        method that returns a list of all details saved
         '''
 
         self.assertEqual(Details.display_details(),Details.details_list)         
+    
+    def test_copy_password(self):
+        '''
+        Test to confirm that we are copying the password from a found details
+        '''
+
+        self.new_details.save_details()
+        Details.copy_password("")
+
+        self.assertEqual(self.new_details.password,pyperclip.paste())
+
 
 if __name__ == '__main__':
     unittest.main()
