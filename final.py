@@ -79,7 +79,7 @@ def main():
                  print('\n')
 
                  for details in display_details():
-                            print(f"{details.first_name} {details.last_name} .....{details.account}")
+                            print(f"{details.firstname} {details.lastname} .....{details.account}")
 
                             print('\n')
              else:
@@ -95,7 +95,7 @@ def main():
                            if check_existing_details(search_account):
 
                                search_details = find_details(search_account)
-                               print(f"{search_details.first_name} {search_details.last_name}")
+                               print(f"{search_details.firstname} {search_details.lastname}")
                                print('-' * 20)
 
                                print(f"account.......{search_details.account}")
